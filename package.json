@@ -1,0 +1,27 @@
+{
+  "name": "wsj_scraper",
+  "version": "1.0.0",
+  "description": "Scraper App built with MongoDb",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsami23/News-Scraper.git"
+  },
+  "author": "Roshnee A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsami23/News-Scraper/issues"
+  },
+  "homepage": "https://github.com/rsami23/News-Scraper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.1.1",
+    "request": "^2.86.0"
+  }
+}
