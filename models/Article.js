@@ -19,11 +19,7 @@ var ArticleSchema = new Schema({
     url: {
         type: String,
         required: true
-    },
-
-    photo: {
-
-    },
+    }
 });
 
 // CREATES THE MODEL FROM THE SCHEMA
