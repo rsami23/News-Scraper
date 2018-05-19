@@ -2,7 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const logger = require("morgan");
+const exphbs = require("express-handlebars");
 
 // SCRAPING TOOLS
 const axios = require("axios");
@@ -15,9 +15,16 @@ const db = require("./models");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// SET UP HANDLEBARS
+app.engine("handlebars", exphbs ({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+app.get("/", function(req, res) {
+    res.render("home.handlebars");
+});
+
+
 // MIDDLEWARE
 // SET UP EXPRESS FOR DATA PARSING
-app.use(logger("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // MAKE PUBLIC FOLDER STATIC

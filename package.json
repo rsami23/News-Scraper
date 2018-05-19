@@ -1,5 +1,5 @@
 {
-  "name": "wsj_scraper",
+  "name": "news_scraper",
   "version": "1.0.0",
   "description": "Scraper App built with MongoDb",
   "main": "server.js",
