@@ -12,17 +12,20 @@ router.get("/scrape", function(req, res) {
         var $ = cheerio.load(response.data);
 
         $(".wsj-headline").each(function(i, element) {
-            var result = {};
+            
+            var title = $(this).children("h3").children("a").text();
+            var link = $(this).children("h3").children("a").attr("href");
+            var summary = $(this).children("p").text();
 
-            result.title = $(this).children("h3").children("a").text();
-            result.link = $(this).children("h3").children("a").attr("href");
-            result.summary = $(this).children("p").text();
-
-            db.Article.create(result).then(function(dbArticle) {
-                console.log(dbArticle) ;
-            }).catch(function(err) {
-                return res.json(err);
-            });
+            if( title && summary && url){
+                var result = {};
+                result.push({
+                    title: title,
+                    summary: summary,
+                    url: url
+                })
+            }
+            return result;
         });
     });
 });
