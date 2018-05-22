@@ -1,45 +1,41 @@
 .jumbotron {
-    background-image: url("/images/model-2 copy.jpeg");
+    background-image: url("/images/news.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #D9D6CD;
-    height: 650px;
+    height: 600px;
     margin-bottom: 0;
     border-radius: 0;  
     box-shadow: 0 4px 2px -2px gray;
 }
 
 .custom-navbar {
-    background-color: #5DB5A4;
     box-shadow: 0 4px 2px -2px gray;
 }
 
-.title{
+.title {
     z-index: 100;
     position: absolute;
-    color: #ED5276;
-    font-weight: bold;
-    left: 300px;
+    color: white;
+    left: 550px;
     top: 250px;
     font-family: 'Seaweed Script', cursive;
 }
 
 #home {
-    color: #ED5276;
+    color: #FFEBCD;
 }
 
-#url {
-    color: #FFEBCD
+.card {
+    margin-top: 20px;
 }
 
-body {
-    background-image: url("https://previews.123rf.com/images/alonastep/alonastep1610/alonastep161000580/65647684-round-geometric-seamless-pattern-fashion-graphic-background-design-retro-stylish-circle-texture-mono.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    
+.border-color  {
+    border: solid 2px #172F1F;
 }
 
-.articles{
-    background-color: white;
-    height: 1000px;
-    box-shadow: 12px 0 15px -4px rgba(44, 44, 44, 0.8), -12px 0 8px -4px rgba(44, 44, 44, 0.8);
+.headline {
+    background-color: #172F1F;
+    color: white;
 }
+

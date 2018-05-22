@@ -1,7 +1,5 @@
-<!--HomePage-->
-
-<!--Article Div-->
-    <div class="container">
+<!--Saved Articles Page-->
+ <div class="container">
         <div class="articles">
             {{#each Article}}
                 <div class="card border-color">
@@ -12,7 +10,8 @@
                         <p> {{result.summary}}</p>
                         <a href={{result.link}} target="_blank">{{this.link}}</a>
                         <br>
-                        <button type="button" class="btn btn-success save" data-id={{result._id}}>Save Article</button>    
+                        <button type="button" class="btn btn-secondary addNote" data-toggle="modal" data-target="#noteModal{{this._id}}" data-id={{this._id}}>Article Notes</button>
+                        <button type="button" class="btn btn-dark delete" data-id={{this._id}}>Delete Article</button>   
                     </div>
                 </div>
             {{/each}}
